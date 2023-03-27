@@ -31,7 +31,7 @@ def reply_messages():
 
     user_id = profile.id
 
-    for match in tinder_api.matches(limit=50):
+    for match in tinder_api.matches(limit=10):
         chatroom = tinder_api.get_messages(match.match_id)
         lastest_message = chatroom.get_lastest_message()
         if lastest_message:
